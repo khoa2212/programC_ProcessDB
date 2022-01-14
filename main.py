@@ -249,11 +249,12 @@ if __name__ == '__main__':
                 print('SHUT DOWN')
                 os.system("shutdown /s /t 1")
             else:
-                # Nhập đúng mật khẩu trẻ thì thực hiện 3 công việc
+                # Nhập đúng mật khẩu trẻ thì thực hiện công việc sau
                 # Lấy dữ liệu thông báo khoảng thời gian sử dụng
                 printMessage()
                 # Đưa ra thông báo còn bao nhiêu phút thì kết thúc và thời gian tiếp theo bật lên
                 caculateTime()
+                # Thực hiện song song 3 công việc
                 while True:
                     p1 = threading.Thread(target=saveKeyboardhit)
                     p2 = threading.Thread(target=checkData())
